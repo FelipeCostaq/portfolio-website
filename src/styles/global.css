@@ -1,16 +1,47 @@
 @import "tailwindcss";
 
-body {
-  background-color: #f3f4f6; 
+@theme {
+  --font-pixel: "Pixelify Sans", sans-serif;
+  --font-sans: "Inter", sans-serif; 
+
+  --color-gb-bg: #051b14; 
   
-  h1 {
-    color: #333;
-    &:hover {
-       color: #000;
-    }
-  }
+  /* Superfícies/Cards (Verde Escuro) */
+  --color-gb-surface: #0f380f;
+  
+  --color-gb-text: #e0f8cf;     /* Verde Claro - Para texto principal */
+  --color-gb-dim: #8bac0f;      /* Verde Médio - Para textos secundários/bordas */
+  --color-gb-dark: #306230;     /* Verde Escuro - Para sombras ou detalhes */
+  
+  /* Acentos (Botões A e B) */
+  --color-gb-accent: #8b1d46;   /* Magenta/Vinho */
+  --color-gb-accent-hover: #a82e5c;
 }
 
-.btn-primary {
-  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors;
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.1)
+  );
+  background-size: 100% 6px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+body {
+  background-color: var(--color-gb-bg);
+  color: var(--color-gb-text);
+  font-family: var(--font-sans);
+  
+  background-image: radial-gradient(rgba(15, 56, 15, 0.453) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
