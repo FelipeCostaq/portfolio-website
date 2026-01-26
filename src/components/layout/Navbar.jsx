@@ -1,53 +1,36 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Navbar() {
+export default function Navbar({ activeSection, setSection }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("#work");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const links = [
-    { name: "Trabalho", href: "#work" },
-    { name: "Sobre", href: "#about" },
-    { name: "Projetos", href: "#projects" },
-    { name: "Contato", href: "#contact" },
+    { id: "home", name: "Home" },
+    { id: "sobre", name: "Sobre" },
+    { id: "trabalhos", name: "Trabalhos" },
+    { id: "projetos", name: "Projetos" },
+    { id: "contato", name: "Contato" },
   ];
 
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit">
-      <nav
-        className={`
-          flex items-center gap-1 rounded-full px-4 py-3
-          transition-all duration-300 border
-          ${
-            isScrolled
-              ? "bg-gb-surface/95 border-gb-dim/30 shadow-lg backdrop-blur-md" 
-              : "bg-gb-surface/80 border-transparent backdrop-blur-sm"
-          }
-        `}
-      >
+      <nav className="flex items-center gap-1 rounded-full px-4 py-3 bg-gb-surface/90 border-gb-dim/30 shadow-lg backdrop-blur-md transition-all">
         <ul className="flex items-center gap-1">
           {links.map((link) => {
-            const isActive = activeLink === link.href;
+            const isActive = activeSection === link.id;
 
             return (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  onClick={() => setActiveLink(link.href)}
+              <li key={link.id}>
+                <button
+                  onClick={() => setSection(link.id)} 
                   className={`
-                    relative 
-                    px-6 py-2     
-                    text-lg md:text-xl
-                    font-medium rounded-full transition-colors duration-300
-                    font-pixel tracking-wide
+                    relative px-5 py-2 text-lg font-medium rounded-full transition-colors duration-300 font-pixel tracking-wide
                     ${isActive ? "text-gb-surface" : "text-gb-text hover:text-white"} 
                   `}
                 >
@@ -55,16 +38,11 @@ export default function Navbar() {
                     <motion.span
                       layoutId="activePill"
                       className="absolute inset-0 bg-gb-text rounded-full shadow-[0_0_10px_#8bac0f] z-0"
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                      }}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
-
                   <span className="relative z-10">{link.name}</span>
-                </a>
+                </button>
               </li>
             );
           })}
