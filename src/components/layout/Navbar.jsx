@@ -28,8 +28,8 @@ export default function Navbar() {
           transition-all duration-300 border
           ${
             isScrolled
-              ? "bg-[#0f380f]/95 border-[#8bac0f]/30 shadow-lg backdrop-blur-md" 
-              : "bg-[#0f380f]/80 border-transparent backdrop-blur-sm"
+              ? "bg-gb-surface/95 border-gb-dim/30 shadow-lg backdrop-blur-md" 
+              : "bg-gb-surface/80 border-transparent backdrop-blur-sm"
           }
         `}
       >
@@ -48,13 +48,13 @@ export default function Navbar() {
                     text-lg md:text-xl
                     font-medium rounded-full transition-colors duration-300
                     font-pixel tracking-wide
-                    ${isActive ? "text-[#0f380f]" : "text-[#e0f8cf] hover:text-white"} 
+                    ${isActive ? "text-gb-surface" : "text-gb-text hover:text-white"} 
                   `}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="activePill"
-                      className="absolute inset-0 bg-[#e0f8cf] rounded-full shadow-[0_0_10px_#8bac0f] z-0"
+                      className="absolute inset-0 bg-gb-text rounded-full shadow-[0_0_10px_#8bac0f] z-0"
                       transition={{
                         type: "spring",
                         stiffness: 300,
