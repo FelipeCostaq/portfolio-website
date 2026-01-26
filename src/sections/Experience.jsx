@@ -53,7 +53,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <div className="text-sm font-pixel text-gb-dim mb-4 flex items-center gap-2">
+              <div className="text-sm font-sans text-gb-dim mb-4 flex items-center gap-2">
                 <span>🕒</span> {exp.period}
               </div>
 
