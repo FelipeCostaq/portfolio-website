@@ -9,6 +9,7 @@ import ThemeToggle from "./components/ui/ThemeToogle";
 
 // Sections
 import Home from "./sections/Home";
+import About from "./sections/About";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,9 +20,7 @@ export default function App() {
       case "home":
         return <Home />;
       case "sobre":
-        return (
-          <div className="p-20 text-gb-text font-pixel">Sobre (Em breve)</div>
-        );
+        return <About />;
       case "trabalhos":
         return (
           <div className="p-20 text-gb-text font-pixel">
