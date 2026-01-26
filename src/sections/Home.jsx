@@ -55,7 +55,7 @@ export default function Home() {
           </h2>
           <h1 className="text-5xl md:text-7xl font-bold font-pixel leading-tight text-gb-text drop-shadow-[4px_4px_0px_#0f380f]">
             <span className="text-gb-accent">DESENVOLVEDOR</span> <br />
-            BACK-END
+            FULL-STACK
           </h1>
         </motion.div>
       </div>
