@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Navbar({ activeSection, setSection }) {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function Navbar({ activeSection, setSection, isScrolled }) {
+  
   const links = [
     { id: "home", name: "Home" },
     { id: "sobre", name: "Sobre" },
@@ -20,7 +12,16 @@ export default function Navbar({ activeSection, setSection }) {
 
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit">
-      <nav className="flex items-center gap-1 rounded-full px-4 py-3 bg-gb-surface/90 border-gb-dim/30 shadow-lg backdrop-blur-md transition-all">
+      <nav 
+        className={`
+          flex items-center gap-1 rounded-full px-4 py-3 
+          transition-all duration-500 border
+          ${isScrolled 
+            ? "bg-gb-surface/20 border-transparent shadow-none backdrop-blur-[2px] hover:bg-gb-surface/90 hover:backdrop-blur-md hover:shadow-lg" 
+            : "bg-gb-surface/90 border-gb-dim/30 shadow-lg backdrop-blur-md"
+          }
+        `}
+      >
         <ul className="flex items-center gap-1">
           {links.map((link) => {
             const isActive = activeSection === link.id;
@@ -32,6 +33,7 @@ export default function Navbar({ activeSection, setSection }) {
                   className={`
                     relative px-5 py-2 text-lg font-medium rounded-full transition-colors duration-300 font-pixel tracking-wide
                     ${isActive ? "text-gb-surface" : "text-gb-text hover:text-white"} 
+                    ${isScrolled && !isActive ? "opacity-70 hover:opacity-100" : "opacity-100"}
                   `}
                 >
                   {isActive && (

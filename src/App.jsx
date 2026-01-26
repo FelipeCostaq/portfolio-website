@@ -10,10 +10,18 @@ import ThemeToggle from "./components/ui/ThemeToogle";
 // Sections
 import Home from "./sections/Home";
 import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = (e) => {
+    setIsScrolled(e.target.scrollTop > 50);
+  };
 
   const renderSection = () => {
     switch (currentSection) {
@@ -22,21 +30,11 @@ export default function App() {
       case "sobre":
         return <About />;
       case "trabalhos":
-        return (
-          <div className="p-20 text-gb-text font-pixel">
-            Trabalhos (Em breve)
-          </div>
-        );
+        return <Experience />;
       case "projetos":
-        return (
-          <div className="p-20 text-gb-text font-pixel">
-            Projetos (Em breve)
-          </div>
-        );
+        return <Projects />;
       case "contato":
-        return (
-          <div className="p-20 text-gb-text font-pixel">Contato (Em breve)</div>
-        );
+        return <Contact />;
       default:
         return <Home />;
     }
@@ -58,9 +56,12 @@ export default function App() {
       >
         <div className="scanlines" />
 
-        <Navbar activeSection={currentSection} setSection={setCurrentSection} />
+        <Navbar activeSection={currentSection} setSection={setCurrentSection} isScrolled={isScrolled} />
 
-        <main className="pt-24 h-screen flex flex-col relative z-10">
+        <main
+          onScroll={handleScroll}
+          className="pt-24 h-screen flex flex-col relative z-10 overflow-y-auto overflow-x-hidden"
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSection}

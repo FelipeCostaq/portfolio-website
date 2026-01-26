@@ -34,6 +34,8 @@ export default function About() {
     show: { opacity: 1, x: 0 },
   };
 
+  const age = new Date().getFullYear() - 2008;
+
   return (
     <section
       id="sobre"
@@ -86,7 +88,7 @@ export default function About() {
 
             <div className="space-y-4 text-gb-text text-lg leading-relaxed font-sans">
               <p>
-                Olá! Me chamo <strong>Felipe</strong>, tenho 17 anos e sou um
+                Olá! Me chamo <strong>Felipe</strong>, tenho {age} anos e sou um
                 desenvolvedor apaixonado de São Paulo. Minha jornada começou
                 cedo, movida pela curiosidade de entender como os softwares
                 funcionavam por trás dos panos.
