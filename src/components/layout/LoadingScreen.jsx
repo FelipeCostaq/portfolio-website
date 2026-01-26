@@ -1,18 +1,29 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useProgress } from "@react-three/drei"; 
 
 export default function LoadingScreen({ onComplete }) {
+  const { progress } = useProgress();
+  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      onComplete();
-    }, 3000);
+      setMinTimeElapsed(true);
+    }, 1500);
+
     return () => clearTimeout(timer);
-  }, [onComplete]);
+  }, []);
+
+  useEffect(() => {
+    if (minTimeElapsed && progress === 100) {
+      onComplete();
+    }
+  }, [minTimeElapsed, progress, onComplete]);
 
   return (
     <motion.div
       exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
       className="fixed inset-0 z-9999 flex flex-col items-center justify-center bg-gb-bg text-gb-text"
     >
       <motion.p
@@ -21,14 +32,14 @@ export default function LoadingScreen({ onComplete }) {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="font-pixel text-xl tracking-widest text-gb-dim uppercase"
       >
-        Iniciando...
+        Iniciando... {Math.round(progress)}% 
       </motion.p>
 
       <div className="w-64 h-4 border-2 border-gb-dim mt-4 rounded p-1">
         <motion.div
           initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 2.5, ease: "linear" }} 
+          animate={{ width: `${Math.max(progress, minTimeElapsed ? 100 : 0)}%` }}
+          transition={{ duration: 0.5, ease: "linear" }} 
           className="h-full bg-gb-accent"
         />
       </div>
