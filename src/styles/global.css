@@ -20,6 +20,17 @@
   --color-accent-hover: #ff9ec1;
 }
 
+@layer base {
+  html, body {
+    cursor: auto;
+  }
+
+  a, button, [role="button"], input, select, textarea, .cursor-pointer {
+    cursor: pointer;
+  }
+}
+
+
 @theme {
   --font-pixel: "Pixelify Sans", sans-serif;
   --font-sans: "Inter", sans-serif;
