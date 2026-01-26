@@ -1,21 +1,36 @@
 @import "tailwindcss";
 
+:root {
+  --color-bg: #051b14;
+  --color-surface: #0f380f;
+  --color-text: #e0f8cf;
+  --color-dim: #8bac0f;
+  --color-dark: #306230;
+  --color-accent: #8b1d46;
+  --color-accent-hover: #a82e5c;
+}
+
+[data-theme="lollipop"] {
+  --color-bg: #151640;      
+  --color-surface: #3f6d9e; 
+  --color-text: #e6f2ef;    
+  --color-dim: #9bf6ff;   
+  --color-dark: #27436b;   
+  --color-accent: #f783b0;  
+  --color-accent-hover: #ff9ec1;
+}
+
 @theme {
   --font-pixel: "Pixelify Sans", sans-serif;
-  --font-sans: "Inter", sans-serif; 
+  --font-sans: "Inter", sans-serif;
 
-  --color-gb-bg: #051b14; 
-  
-  /* Superfícies/Cards (Verde Escuro) */
-  --color-gb-surface: #0f380f;
-  
-  --color-gb-text: #e0f8cf;     /* Verde Claro - Para texto principal */
-  --color-gb-dim: #8bac0f;      /* Verde Médio - Para textos secundários/bordas */
-  --color-gb-dark: #306230;     /* Verde Escuro - Para sombras ou detalhes */
-  
-  /* Acentos (Botões A e B) */
-  --color-gb-accent: #8b1d46;   /* Magenta/Vinho */
-  --color-gb-accent-hover: #a82e5c;
+  --color-gb-bg: var(--color-bg);
+  --color-gb-surface: var(--color-surface);
+  --color-gb-text: var(--color-text);
+  --color-gb-dim: var(--color-dim);
+  --color-gb-dark: var(--color-dark);
+  --color-gb-accent: var(--color-accent);
+  --color-gb-accent-hover: var(--color-accent-hover);
 }
 
 .scanlines {
