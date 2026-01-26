@@ -13,7 +13,7 @@ export default function Navbar({ activeSection, setSection }) {
   const links = [
     { id: "home", name: "Home" },
     { id: "sobre", name: "Sobre" },
-    { id: "trabalhos", name: "Trabalhos" },
+    { id: "trabalhos", name: "Experiências" },
     { id: "projetos", name: "Projetos" },
     { id: "contato", name: "Contato" },
   ];
