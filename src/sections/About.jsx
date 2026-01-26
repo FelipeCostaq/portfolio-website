@@ -93,7 +93,7 @@ export default function About() {
               </p>
               <p>
                 Hoje, transformo essa curiosidade em código. Estou focado no
-                ecossistema <strong>Full Stack</strong>, unindo a agilidade do
+                ecossistema <strong>Full-Stack</strong>, unindo a agilidade do
                 React.js no frontend com a robustez do <strong>C#</strong> e{" "}
                 <strong>ASP.NET</strong> no backend.
               </p>
