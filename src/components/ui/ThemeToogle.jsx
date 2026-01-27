@@ -53,7 +53,7 @@ export default function ThemeToggle() {
               onClick={() => { setTheme("classic"); setIsOpen(false); }}
               className="relative group flex items-center gap-2"
             >
-              <span className="absolute left-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
+              <span className="absolute right-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
                 Classic
               </span>
               <div className={`w-10 h-10 rounded-full border-2 border-white shadow-md bg-[#051b14] flex items-center justify-center ${theme === 'classic' ? 'ring-2 ring-yellow-400' : ''}`}>
@@ -65,7 +65,7 @@ export default function ThemeToggle() {
               onClick={() => { setTheme("lollipop"); setIsOpen(false); }}
               className="relative group flex items-center gap-2"
             >
-               <span className="absolute left-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
+               <span className="absolute right-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
                 Lollipop
               </span>
               <div className={`w-10 h-10 rounded-full border-2 border-white shadow-md bg-[#151640] flex items-center justify-center ${theme === 'lollipop' ? 'ring-2 ring-yellow-400' : ''}`}>
