@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ isOpen, onToggle }) {
   const [theme, setTheme] = useState("classic");
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -30,30 +29,21 @@ export default function ThemeToggle() {
   );
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col-reverse items-center gap-4">
+    <div className="relative w-12 h-12 z-40">
       
-      <motion.button
-        whileHover={{ scale: 1.1, rotate: 10 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-3 bg-gb-accent text-gb-bg rounded-full shadow-[2px_2px_0px_#000] border-2 border-gb-bg hover:brightness-110 transition-all"
-      >
-        <PaletteIcon />
-      </motion.button>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.8 }}
+            initial={{ opacity: 0, y: 10, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            className="flex flex-col gap-3 mb-2"
+            exit={{ opacity: 0, y: 10, scale: 0.8 }}
+            className="absolute bottom-full mb-4 -left-2 flex flex-col gap-3 pb-2"
           >
-            <button
-              onClick={() => { setTheme("classic"); setIsOpen(false); }}
-              className="relative group flex items-center gap-2"
+            <button 
+              onClick={() => { setTheme("classic"); onToggle(); }} // 2. Fecha usando a função do pai
+              className="relative group flex items-center justify-center"
             >
-              <span className="absolute right-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
+              <span className="absolute right-full mr-3 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel pointer-events-none">
                 Classic
               </span>
               <div className={`w-10 h-10 rounded-full border-2 border-white shadow-md bg-[#051b14] flex items-center justify-center ${theme === 'classic' ? 'ring-2 ring-yellow-400' : ''}`}>
@@ -61,11 +51,11 @@ export default function ThemeToggle() {
               </div>
             </button>
 
-            <button
-              onClick={() => { setTheme("lollipop"); setIsOpen(false); }}
-              className="relative group flex items-center gap-2"
+            <button 
+              onClick={() => { setTheme("lollipop"); onToggle(); }} // 2. Fecha usando a função do pai
+              className="relative group flex items-center justify-center"
             >
-               <span className="absolute right-full ml-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel">
+               <span className="absolute right-full mr-3 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-pixel pointer-events-none">
                 Lollipop
               </span>
               <div className={`w-10 h-10 rounded-full border-2 border-white shadow-md bg-[#151640] flex items-center justify-center ${theme === 'lollipop' ? 'ring-2 ring-yellow-400' : ''}`}>
@@ -75,6 +65,15 @@ export default function ThemeToggle() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <motion.button
+        whileHover={{ scale: 1.1, rotate: 10 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={onToggle} 
+        className="w-12 h-12 p-3 bg-gb-accent text-gb-bg rounded-full shadow-[2px_2px_0px_#000] border-2 border-gb-bg hover:brightness-110 transition-all flex items-center justify-center"
+      >
+        <PaletteIcon />
+      </motion.button>
     </div>
   );
 }
