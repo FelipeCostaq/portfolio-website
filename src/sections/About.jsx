@@ -39,7 +39,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 py-30 -mt-12"
+      className="flex items-center justify-center px-6 md:px-12 py-30 -mt-12"
     >
       <div className="max-w-7xl w-full flex flex-col md:flex-row gap-12 items-start">
         <div className="w-full md:w-1/2">
@@ -107,13 +107,6 @@ export default function About() {
                 <strong>desafio</strong> <br />
                  para elevar minha <strong>capacidade técnica</strong>.
               </p>
-            </div>
-
-            <div className="mt-10 pt-6 border-t border-gb-dim/20 flex items-center gap-6">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-linear-to-r from-gb-accent to-gb-dim rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-              </div>
-              <div className="h-32 w-full max-w-50"></div>
             </div>
           </motion.div>
         </div>
