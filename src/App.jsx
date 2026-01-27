@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // Components
 import Navbar from "./components/layout/Navbar";
 import LoadingScreen from "./components/layout/LoadingScreen";
-import ThemeToggle from "./components/ui/ThemeToogle";
+import ThemeToggle from "./components/ui/ThemeToggle";
 
 // Sections
 import Home from "./sections/Home";
