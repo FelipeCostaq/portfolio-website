@@ -1,29 +1,32 @@
 import { motion } from "framer-motion";
-
-const skillCategories = [
-  {
-    title: "FRONTEND",
-    color: "text-gb-accent-hover",
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS"],
-  },
-  {
-    title: "BACKEND",
-    color: "text-gb-dim",
-    skills: ["C#", "ASP.NET", "Entity Framework", "API REST"],
-  },
-  {
-    title: "BANCO DE DADOS",
-    color: "text-yellow-400",
-    skills: ["SQL Server", "MySQL"],
-  },
-  {
-    title: "FERRAMENTAS",
-    color: "text-blue-400",
-    skills: ["Git", "GitHub"],
-  },
-];
+import { useLanguage } from "../context/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
+
+  const skillCategories = [
+    {
+      title: "FRONTEND",
+      color: "text-gb-accent-hover",
+      skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS"],
+    },
+    {
+      title: "BACKEND",
+      color: "text-gb-dim",
+      skills: ["C#", "ASP.NET", "Entity Framework", "API REST"],
+    },
+    {
+      title: t.about.database,
+      color: "text-yellow-400",
+      skills: ["SQL Server", "MySQL"],
+    },
+    {
+      title: t.about.tools,
+      color: "text-blue-400",
+      skills: ["Git", "GitHub"],
+    },
+  ];
+
   const containerVars = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.1 } },
@@ -82,31 +85,14 @@ export default function About() {
           >
             <div className="mb-6">
               <h2 className="text-4xl md:text-5xl font-bold font-pixel text-gb-accent-hover mt-2">
-                SOBRE MIM
+                {t.about.title}
               </h2>
             </div>
 
             <div className="space-y-4 text-gb-text text-lg leading-relaxed font-sans">
-              <p>
-                Olá! Me chamo <strong>Felipe</strong>, tenho {age} anos e sou um
-                desenvolvedor apaixonado de São Paulo. Minha jornada começou
-                cedo, movida pela curiosidade de entender como os softwares
-                funcionavam por trás dos panos.
-              </p>
-              <p>
-                Hoje, transformo essa curiosidade em código. Estou focado no
-                ecossistema <strong>Full-Stack</strong>, unindo a agilidade do
-                React.js no frontend com a robustez do <strong>C#</strong> e{" "}
-                <strong>ASP.NET</strong> no backend.
-              </p>
-              <p>
-                Meu objetivo é criar aplicações que não sejam apenas funcionais,
-                mas que ofereçam uma experiência visual única e fluida. Estou
-                sempre <strong>estudando</strong> novas{" "}
-                <strong>tecnologias</strong> e buscando o próximo{" "}
-                <strong>desafio</strong> <br />
-                 para elevar minha <strong>capacidade técnica</strong>.
-              </p>
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+              <p>{t.about.p3}</p>
             </div>
           </motion.div>
         </div>

@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Linkedin, Mail, Check, Github } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
   const [isCopied, setIsCopied] = useState(false);
   const email = "felipecostasiqu@gmail.com";
+  const { t } = useLanguage();
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -27,10 +29,10 @@ export default function Contact() {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-6xl font-bold font-pixel text-gb-text mb-6">
-            PRONTO PARA <span className="text-gb-accent">COMEÇAR?</span>
+            {t.contact.title} <span className="text-gb-accent">{t.contact.subtitle}</span>
           </h2>
           <p className="text-gb-dim text-lg max-w-xl mx-auto font-sans leading-relaxed">
-            Estou sempre aberto a novos projetos e parcerias.
+            {t.contact.text}
           </p>
         </motion.div>
 
@@ -51,7 +53,7 @@ export default function Contact() {
             "
           >
             <Linkedin size={24} />
-            CONECTAR NO LINKEDIN
+            {t.contact.buttons.linkedin}
           </motion.a>
 
           <motion.div
@@ -86,7 +88,7 @@ export default function Contact() {
                   ${isCopied ? "text-green-500" : "text-gb-dim/50"}
                 `}
                 >
-                  {isCopied ? "Copiado!" : "Clique para copiar Email"}
+                  {isCopied ? t.contact.buttons.copied : t.contact.buttons.copy}
                 </span>
 
                 <span className="text-gb-text font-sans text-lg">{email}</span>

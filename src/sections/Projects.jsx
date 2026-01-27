@@ -8,51 +8,7 @@ import {
   ChevronRight,
   Image as ImageIcon,
 } from "lucide-react";
-
-const projects = [
-  {
-    title: "Sistema Estacionamento",
-    description:
-      "Um painel administrativo que permite gerenciar de forma simples e eficiente os veículos cadastrados e vagas.",
-    techs: [
-      "React.js",
-      "C#",
-      "ASP.NET",
-      "Entity Framework",
-      "SQL Server",
-      "Git",
-    ],
-    github: "https://github.com/FelipeCostaq/car-parking-app",
-    deploy: null,
-    clickable: true,
-    images: [
-      "../src/assets/images/project/car-parking/car-parking-image-1.png",
-      "../src/assets/images/project/car-parking/car-parking-image-2.png",
-      "../src/assets/images/project/car-parking/car-parking-image-3.png",
-    ],
-  },
-  {
-    title: "Metas Financeiras",
-    description:
-      "API para cadastro de usuários e gerenciamento de metas financeiras.",
-    techs: ["C#", "ASP.NET", "Entity Framework", "JWT", "Git", "Swagger"],
-    github: "https://github.com/FelipeCostaq/financial-goals-api",
-    deploy: null,
-    clickable: true,
-    images: [
-      "../src/assets/images/project/financial-goal/financial-goal-image-1.png"
-    ],
-  },
-  {
-    title: "Portfólio",
-    description: "Este portfólio que você está vendo!",
-    techs: ["React", "Tailwind", "R3F", "Git"],
-    github: "https://github.com/FelipeCostaq/portfolio-website",
-    deploy: null,
-    clickable: false,
-    images: [],
-  },
-];
+import { useLanguage } from "../context/LanguageContext";
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -140,6 +96,50 @@ const ProjectModal = ({ project, onClose }) => {
 
 export default function Projects({ setModalOpen }) {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      title: t.projects.cards[0].title,
+      description: t.projects.cards[0].legend,
+      techs: [
+        "React.js",
+        "C#",
+        "ASP.NET",
+        "Entity Framework",
+        "SQL Server",
+        "Git",
+      ],
+      github: "https://github.com/FelipeCostaq/car-parking-app",
+      deploy: null,
+      clickable: true,
+      images: [
+        "../src/assets/images/project/car-parking/car-parking-image-1.png",
+        "../src/assets/images/project/car-parking/car-parking-image-2.png",
+        "../src/assets/images/project/car-parking/car-parking-image-3.png",
+      ],
+    },
+    {
+      title: t.projects.cards[1].title,
+      description: t.projects.cards[1].legend,
+      techs: ["C#", "ASP.NET", "Entity Framework", "JWT", "Git", "Swagger"],
+      github: "https://github.com/FelipeCostaq/financial-goals-api",
+      deploy: null,
+      clickable: true,
+      images: [
+        "../src/assets/images/project/financial-goal/financial-goal-image-1.png",
+      ],
+    },
+    {
+      title: t.projects.cards[2].title,
+      description: t.projects.cards[2].legend,
+      techs: ["React", "Tailwind", "R3F", "Git"],
+      github: "https://github.com/FelipeCostaq/portfolio-website",
+      deploy: null,
+      clickable: false,
+      images: [],
+    },
+  ];
 
   useEffect(() => {
     if (setModalOpen) {
@@ -158,10 +158,11 @@ export default function Projects({ setModalOpen }) {
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-5xl font-bold font-pixel text-gb-text mb-4">
-          <span className="text-gb-accent">MEUS</span> PROJETOS
+          <span className="text-gb-accent">{t.projects.title}</span>{" "}
+          {t.projects.subtitle}
         </h2>
         <p className="text-gb-dim font-pixel text-sm md:text-base animate-pulse">
-          &lt; CLIQUE NOS CARDS PARA VER GALERIA /&gt;
+          {t.projects.instruction}
         </p>
       </motion.div>
 
@@ -234,7 +235,7 @@ export default function Projects({ setModalOpen }) {
 
                 {project.clickable && (
                   <span className="ml-auto text-[10px] font-pixel text-gb-accent self-center animate-pulse hidden md:block">
-                    CLIQUE PARA ABRIR
+                    {t.projects.buttons.clickOpen}
                   </span>
                 )}
               </div>

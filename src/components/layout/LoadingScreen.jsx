@@ -32,7 +32,7 @@ export default function LoadingScreen({ onComplete }) {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="font-pixel text-xl tracking-widest text-gb-dim uppercase"
       >
-        Iniciando... {Math.round(progress)}% 
+        {Math.round(progress)}% 
       </motion.p>
 
       <div className="w-64 h-4 border-2 border-gb-dim mt-4 rounded p-1">

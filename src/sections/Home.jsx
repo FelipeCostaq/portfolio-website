@@ -10,6 +10,8 @@ import {
 
 import { GameboyModel } from "../components/3d/Gameboy";
 
+import { useLanguage } from "../context/LanguageContext";
+
 useGLTF.preload("/models/gameboy_classic.glb");
 
 const WavingHand = () => {
@@ -48,6 +50,8 @@ const InteractiveText = ({ children, className }) => {
 };
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <section className="h-full w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 relative overflow-hidden md:overflow-visible -mt-6">
 
@@ -86,16 +90,16 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-2xl md:text-3xl text-gb-text font-pixel mb-2 flex items-center justify-end gap-2">
-            Oi, eu sou o Felipe <WavingHand />
+            {t.home.greeting} <WavingHand />
           </h2>
           
           <h1 className="text-5xl md:text-7xl font-bold font-pixel leading-tight text-gb-text drop-shadow-[4px_4px_0px_#0f380f]">
             <InteractiveText className="text-gb-accent">
-              DESENVOLVEDOR
+              {t.home.role1}
             </InteractiveText> 
             <br />
             <InteractiveText>
-              FULL-STACK
+              {t.home.role2}
             </InteractiveText>
           </h1>
         </motion.div>

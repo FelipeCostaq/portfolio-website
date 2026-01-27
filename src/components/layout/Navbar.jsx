@@ -1,13 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Navbar({ activeSection, setSection, isScrolled, isHidden }) {
-  
+  const { t } = useLanguage();
+
+
   const links = [
-    { id: "home", name: "Home" },
-    { id: "sobre", name: "Sobre" },
-    { id: "trabalhos", name: "Experiências" },
-    { id: "projetos", name: "Projetos" },
-    { id: "contato", name: "Contato" },
+    { id: "home", name: t.navbar.home },
+    { id: "sobre", name: t.navbar.about },
+    { id: "trabalhos", name: t.navbar.work },
+    { id: "projetos", name: t.navbar.projects },
+    { id: "contato", name: t.navbar.contact },
   ];
 
   return (

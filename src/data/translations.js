@@ -14,41 +14,51 @@ export const translations = {
     },
     about: {
       title: "SOBRE MIM",
-      p1: "Olá! Me chamo Felipe, tenho 17 anos e sou um desenvolvedor apaixonado de São Paulo.",
-      p2: "Hoje, transformo curiosidade em código. Focado no ecossistema Full Stack, unindo React.js no frontend com C# e ASP.NET no backend.",
-      p3: "Meu objetivo é criar aplicações funcionais e visuais.",
-      status: {
-        location: "São Paulo, SP",
-        gaming: "Coding & Games",
-        work: "Disponível para trabalho"
-      }
+      p1: "Olá! Me chamo Felipe, tenho 18 anos e sou um desenvolvedor apaixonado de São Paulo. Minha jornada começou cedo, movida pela curiosidade de entender como os softwares funcionavam por trás dos panos.",
+      p2: "Hoje, transformo essa curiosidade em código. Estou focado no ecossistema Full-Stack, unindo a agilidade do React.js no frontend com a robustez do C# e ASP.NET no backend.",
+      p3: "Meu objetivo é criar aplicações que não sejam apenas funcionais, mas que ofereçam uma experiência visual única e fluida. Estou sempre estudando novas tecnologias e buscando o próximo desafio para elevar minha capacidade técnica.",
+      tools: "FERRAMENTAS",
+      database: "BANCO DE DADOS",
     },
     experience: {
       title: "CARREIRA",
-      loading: "Carregando próximo nível...",
       jobs: [
         {
-          role: "Full Stack Developer",
+          role: "Desenvolvedor Full-Stack",
           company: "Startup VidaPet.Tech",
-          period: "Set 2025 - Presente",
+          period: "Setembro 2025 - Presente",
           description: [
-            "Interfaces modernas com React e React Native focadas em UX.",
-            "Construção de APIs em PHP e bancos MySQL.",
-            "Colaboração em equipe para resolução de bugs."
-          ]
-        }
-      ]
+            "Desenvolvimento e manutenção de interfaces modernas e responsivas utilizando React.js e React Native, com foco total na experiência do usuário (UX).",
+            "Construção de APIs em PHP, garantindo a comunicação eficiente com bancos de dados MySQL para consulta e gestão de informações vitais do ecossistema.",
+            "Colaboração em equipe para resolução de bugs e melhorias.",
+          ],
+        },
+      ],
     },
     projects: {
       title: "MEUS",
       subtitle: "PROJETOS",
       instruction: "< CLIQUE PARA VER GALERIA />",
-      cartridge: "CRT",
       buttons: {
-        github: "Github",
         demo: "VER DEMO",
-        clickOpen: "CLIQUE PARA ABRIR"
-      }
+        clickOpen: "CLIQUE PARA ABRIR",
+      },
+      cards: [
+        {
+          title: "Sistema de Estacionamento",
+          legend:
+            "Um painel administrativo que permite gerenciar de forma simples e eficiente os veículos cadastrados, as vagas disponíveis e a atribuição de vagas para cada veículo",
+        },
+        {
+          title: "Metas Financeiras",
+          legend:
+            "API para gerenciamento de metas financeiras, podendo gerenciar metas a serem batidas e metas atingidas.",
+        },
+        {
+          title: "Portfólio",
+          legend: "Este portfólio que você está vendo!",
+        },
+      ],
     },
     contact: {
       title: "PRONTO PARA",
@@ -57,13 +67,9 @@ export const translations = {
       buttons: {
         linkedin: "CONECTAR NO LINKEDIN",
         copy: "CLIQUE PARA COPIAR",
-        copied: "COPIADO!"
+        copied: "COPIADO!",
       },
-      footer: {
-        rights: "TODOS OS DIREITOS RESERVADOS.",
-        model: "Modelo 3D"
-      }
-    }
+    },
   },
   en: {
     navbar: {
@@ -80,41 +86,51 @@ export const translations = {
     },
     about: {
       title: "ABOUT ME",
-      p1: "Hello! I'm Felipe, a 17-year-old passionate developer from São Paulo.",
-      p2: "Today, I turn curiosity into code. Focused on the Full Stack ecosystem, combining React.js on the frontend with C# and ASP.NET on the backend.",
-      p3: "My goal is to create functional and visual applications.",
-      status: {
-        location: "São Paulo, Brazil",
-        gaming: "Coding & Games",
-        work: "Available for work"
-      }
+      p1: "Hello! My name is Felipe, I’m 18 years old, and I’m a passionate developer from São Paulo. My journey started early, fueled by a curiosity to understand how software works behind the scenes.",
+      p2: "Today, I turn that curiosity into code. I focus on the full-stack ecosystem, combining the agility of React.js on the frontend with the robustness of C# and ASP.NET on the backend.",
+      p3: "My goal is to create applications that are not only functional, but also deliver a unique and seamless visual experience. I am always studying new technologies and seeking the next challenge to elevate my technical skills.",
+      tools: "TOOLS",
+      database: "DATABASE",
     },
     experience: {
       title: "CAREER",
-      loading: "Loading next level...",
       jobs: [
         {
-          role: "Full Stack Developer",
+          role: "Full-Stack Developer",
           company: "Startup VidaPet.Tech",
-          period: "Sep 2025 - Present",
+          period: "September 2025 - Present",
           description: [
-            "Modern interfaces with React and React Native focused on UX.",
-            "Building APIs in PHP and MySQL databases.",
-            "Team collaboration for bug fixing."
-          ]
-        }
-      ]
+            "Development and maintenance of modern, responsive interfaces using React.js and React Native, with a strong focus on user experience (UX).",
+            "API development in PHP, ensuring efficient communication with MySQL databases for querying and management of critical ecosystem data.",
+            "Collaborated with team members to troubleshoot bugs and drive improvements.",
+          ],
+        },
+      ],
     },
     projects: {
       title: "MY",
       subtitle: "PROJECTS",
       instruction: "< CLICK TO VIEW GALLERY />",
-      cartridge: "CRT",
       buttons: {
-        github: "Github",
         demo: "VIEW DEMO",
-        clickOpen: "CLICK TO OPEN"
-      }
+        clickOpen: "CLICK TO OPEN",
+      },
+      cards: [
+        {
+          title: "Parking Management System",
+          legend:
+            "An administrative dashboard that allows simple and efficient management of registered vehicles and parking spaces.",
+        },
+        {
+          title: "Financial Goals",
+          legend:
+            "An API for user registration and management of financial goals.",
+        },
+        {
+          title: "Portfolio",
+          legend: "The portfolio you’re looking at right now!",
+        },
+      ],
     },
     contact: {
       title: "READY TO",
@@ -123,12 +139,8 @@ export const translations = {
       buttons: {
         linkedin: "CONNECT ON LINKEDIN",
         copy: "CLICK TO COPY",
-        copied: "COPIED!"
+        copied: "COPIED!",
       },
-      footer: {
-        rights: "ALL RIGHTS RESERVED.",
-        model: "3D Model"
-      }
-    }
-  }
+    },
+  },
 };
