@@ -18,6 +18,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleScroll = (e) => {
     setIsScrolled(e.target.scrollTop > 50);
@@ -32,7 +33,7 @@ export default function App() {
       case "trabalhos":
         return <Experience />;
       case "projetos":
-        return <Projects />;
+        return <Projects setModalOpen={setIsModalOpen} />;
       case "contato":
         return <Contact />;
       default:
@@ -56,7 +57,7 @@ export default function App() {
       >
         <div className="scanlines" />
 
-        <Navbar activeSection={currentSection} setSection={setCurrentSection} isScrolled={isScrolled} />
+        <Navbar activeSection={currentSection} setSection={setCurrentSection} isScrolled={isScrolled} isHidden={isModalOpen} />
 
         <main
           onScroll={handleScroll}
