@@ -28,7 +28,7 @@ Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidad
 ## 📸
 
 <a href="https://portfolio-felipecosta.netlify.app/">
-  <img height="425" width="800" src="" alt="Imagem do Portfolio">
+  <img height="425" width="800" src="https://github.com/FelipeCostaq/portfolio-website/blob/main/Imagem%20Portf%C3%B3lio.png?raw=true" alt="Imagem do Portfolio">
 <a/>
 
 
