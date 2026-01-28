@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Folder,
@@ -33,12 +34,19 @@ const ProjectModal = ({ project, onClose }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextImage, prevImage, onClose]);
 
-  return (
+  useEffect(() => {
+    document.body.style.overflow = "hidden"; 
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
       onClick={onClose}
     >
       <motion.div
@@ -65,6 +73,7 @@ const ProjectModal = ({ project, onClose }) => {
             alt={`Slide ${currentIndex}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
             className="w-full h-full object-contain"
           />
 
@@ -90,7 +99,8 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body 
   );
 };
 
@@ -102,32 +112,25 @@ export default function Projects({ setModalOpen }) {
     {
       title: t.projects.cards[0].title,
       description: t.projects.cards[0].legend,
-      techs: [
-        "React.js",
-        "C#",
-        "ASP.NET",
-        "Entity Framework",
-        "SQL Server",
-        "Git",
-      ],
+      techs: ["React.js", "C#", "ASP.NET", "SQL Server", "Git"],
       github: "https://github.com/FelipeCostaq/car-parking-app",
       deploy: null,
       clickable: true,
       images: [
-        "../src/assets/images/project/car-parking/car-parking-image-1.png",
-        "../src/assets/images/project/car-parking/car-parking-image-2.png",
-        "../src/assets/images/project/car-parking/car-parking-image-3.png",
+        "/images/project/car-parking/car-parking-image-1.png",
+        "/images/project/car-parking/car-parking-image-2.png",
+        "/images/project/car-parking/car-parking-image-3.png",
       ],
     },
     {
       title: t.projects.cards[1].title,
       description: t.projects.cards[1].legend,
-      techs: ["C#", "ASP.NET", "Entity Framework", "JWT", "Git", "Swagger"],
+      techs: ["C#", "ASP.NET", "Entity Framework", "JWT", "Swagger"],
       github: "https://github.com/FelipeCostaq/financial-goals-api",
       deploy: null,
       clickable: true,
       images: [
-        "../src/assets/images/project/financial-goal/financial-goal-image-1.png",
+        "/images/project/financial-goal/financial-goal-image-1.png",
       ],
     },
     {
