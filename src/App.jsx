@@ -126,7 +126,7 @@ export default function App() {
           </main>
         </div>
 
-        <div className="fixed bottom-6 right-6 z-50 flex flex-row gap-10 items-end">
+        <div className="fixed bottom-6 right-6 z-50 flex flex-row gap-2 items-end">
           <LanguageToggle
             isOpen={activeWidget === "lang"}
             onToggle={() =>
