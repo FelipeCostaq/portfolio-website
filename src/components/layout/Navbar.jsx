@@ -65,7 +65,7 @@ export default function Navbar({ activeSection, setSection, isScrolled, isHidden
                       {isActive && (
                         <motion.span
                           layoutId="activePill"
-                          className="absolute inset-0 bg-gb-text rounded-full shadow-[0_0_10px_#8bac0f] z-0"
+                          className="absolute inset-0 bg-gb-text rounded-full shadow-[0_0_10px_var(--color-gb-dim)] z-0"
                           transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         />
                       )}
