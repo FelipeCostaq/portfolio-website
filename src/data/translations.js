@@ -10,12 +10,12 @@ export const translations = {
     home: {
       greeting: "Oi, eu sou o Felipe",
       role1: "DESENVOLVEDOR",
-      role2: "FULL-STACK",
+      role2: "BACK-END",
     },
     about: {
       title: "SOBRE MIM",
       p1: "Olá! Me chamo Felipe, tenho 18 anos e sou um desenvolvedor apaixonado de São Paulo. Minha jornada começou cedo, movida pela curiosidade de entender como os softwares funcionavam por trás dos panos.",
-      p2: "Hoje, transformo essa curiosidade em código. Estou focado no ecossistema Full-Stack, unindo a agilidade do React.js no frontend com a robustez do C# e ASP.NET no backend.",
+      p2: "Hoje, transformo essa curiosidade em código. Estou focado no ecossistema .NET, me aprofundando na robustez do C# e ASP.NET no backend.",
       p3: "Meu objetivo é criar aplicações que não sejam apenas funcionais, mas que ofereçam uma experiência visual única e fluida. Estou sempre estudando novas tecnologias e buscando o próximo desafio para elevar minha capacidade técnica.",
       tools: "FERRAMENTAS",
       database: "BANCO DE DADOS",
@@ -81,13 +81,13 @@ export const translations = {
     },
     home: {
       greeting: "Hi, I'm Felipe",
-      role1: "FULL-STACK",
+      role1: "BACK-END",
       role2: "DEVELOPER",
     },
     about: {
       title: "ABOUT ME",
       p1: "Hello! My name is Felipe, I’m 18 years old, and I’m a passionate developer from São Paulo. My journey started early, fueled by a curiosity to understand how software works behind the scenes.",
-      p2: "Today, I turn that curiosity into code. I focus on the full-stack ecosystem, combining the agility of React.js on the frontend with the robustness of C# and ASP.NET on the backend.",
+      p2: "Today, I’m turning that curiosity into code. I am focusing on the .NET ecosystem, deepening my expertise in the robustness of C# and ASP.NET for backend development.",
       p3: "My goal is to create applications that are not only functional, but also deliver a unique and seamless visual experience. I am always studying new technologies and seeking the next challenge to elevate my technical skills.",
       tools: "TOOLS",
       database: "DATABASE",
