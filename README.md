@@ -1,16 +1,34 @@
-# React + Vite
+# 👨‍💻 Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidades e projetos como desenvolvedor full-stack.
 
-Currently, two official plugins are available:
+## 🌐 Acesse o site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Portfolio](https://itsfelipe.me/)
 
-## React Compiler
+## 🛠️ Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Front-end
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-grey?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Expanding the ESLint configuration
+### Outros
+- ![Git](https://img.shields.io/badge/versionamento-Git-%23F05033?logo=git&logoColor=white)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💼 O que você encontrará no portfólio
+
+- **Sobre mim** — Um resumo da minha trajetória e tecnologias usadas.
+- **Experiências** - Experiência profissionais.
+- **Projetos** — Destaques de projetos desenvolvidos.
+- **Contato** — Formulário funcional para entrar em contato comigo.
+
+## 📸
+
+<a href="https://portfolio-felipecosta.netlify.app/">
+  <img height="425" width="800" src="https://github.com/FelipeCostaq/portfolio-website/blob/main/Imagem%20Portf%C3%B3lio.png?raw=true" alt="Imagem do Portfolio">
+<a/>
+
+
