@@ -142,6 +142,17 @@ export default function Projects({ setModalOpen }) {
       clickable: false,
       images: [],
     },
+    {
+      title: t.projects.cards[3].title,
+      description: t.projects.cards[3].legend,
+      techs: ["C#", "ASP.NET", "Entity Framework", "Minimal API", "Swagger"],
+      github: "https://github.com/FelipeCostaq/desafio-fooddash-backend",
+      deploy: null,
+      clickable: true,
+      images: [
+        "images/project/fooddash/fooddash-image-1.png"
+      ]
+    }
   ];
 
   useEffect(() => {
