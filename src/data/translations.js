@@ -1,3 +1,5 @@
+import { legend, title } from "framer-motion/client";
+
 export const translations = {
   pt: {
     navbar: {
@@ -58,6 +60,10 @@ export const translations = {
           title: "Portfólio",
           legend: "Este portfólio que você está vendo!",
         },
+        {
+          title: "FoodDash",
+          legend: "API para cadastro de pratos em um cardápio e criação de pedidos usando arquitetura Minimal API."
+        }
       ],
     },
     contact: {
@@ -130,6 +136,10 @@ export const translations = {
           title: "Portfolio",
           legend: "The portfolio you’re looking at right now!",
         },
+        {
+          title: "FoodDash",
+          legend: "API for menu item registration and order creation using Minimal API architecture."
+        }
       ],
     },
     contact: {
