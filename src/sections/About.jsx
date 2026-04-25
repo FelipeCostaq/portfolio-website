@@ -6,24 +6,19 @@ export default function About() {
 
   const skillCategories = [
     {
-      title: "FRONTEND",
-      color: "text-gb-accent-hover",
-      skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS"],
-    },
-    {
       title: "BACKEND",
       color: "text-gb-dim",
-      skills: ["C#", "ASP.NET", "Entity Framework", "API REST"],
+      skills: [".NET", "ASP.NET", "Entity Framework", "API REST"],
     },
     {
       title: t.about.database,
       color: "text-yellow-400",
-      skills: ["SQL Server", "MySQL"],
+      skills: ["SQL Server", "SQLite", "MySQL"],
     },
     {
       title: t.about.tools,
       color: "text-blue-400",
-      skills: ["Git", "GitHub"],
+      skills: ["Git", "GitHub", "Docker"],
     },
   ];
 

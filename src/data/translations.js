@@ -28,12 +28,18 @@ export const translations = {
         {
           role: "Desenvolvedor Full-Stack",
           company: "Startup VidaPet.Tech",
-          period: "Setembro 2025 - Presente",
+          period: "Setembro 2025 - Abril 2026",
           description: [
             "Desenvolvimento e manutenção de interfaces modernas e responsivas utilizando React.js e React Native, com foco total na experiência do usuário (UX).",
             "Construção de APIs em PHP, garantindo a comunicação eficiente com bancos de dados MySQL para consulta e gestão de informações vitais do ecossistema.",
             "Colaboração em equipe para resolução de bugs e melhorias.",
           ],
+        },
+        {
+          role: "Desenvolvedor de Sistemas",
+          company: "Timeware",
+          period: "Abril 2026 - Presente",
+          description: [],
         },
       ],
     },
@@ -62,8 +68,9 @@ export const translations = {
         },
         {
           title: "FoodDash",
-          legend: "API para cadastro de pratos em um cardápio e criação de pedidos usando arquitetura Minimal API."
-        }
+          legend:
+            "API para cadastro de pratos em um cardápio e criação de pedidos usando arquitetura Minimal API.",
+        },
       ],
     },
     contact: {
@@ -111,6 +118,12 @@ export const translations = {
             "Collaborated with team members to troubleshoot bugs and drive improvements.",
           ],
         },
+        {
+          role: "System Developer",
+          company: "Timeware",
+          period: "April 2026 - Present",
+          description: [],
+        },
       ],
     },
     projects: {
@@ -138,8 +151,9 @@ export const translations = {
         },
         {
           title: "FoodDash",
-          legend: "API for menu item registration and order creation using Minimal API architecture."
-        }
+          legend:
+            "API for menu item registration and order creation using Minimal API architecture.",
+        },
       ],
     },
     contact: {
