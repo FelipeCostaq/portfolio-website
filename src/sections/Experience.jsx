@@ -6,6 +6,21 @@ export default function Experience() {
 
   const experiences = [
     {
+      role: t.experience.jobs[1].role,
+      company: "Timeware",
+      period: t.experience.jobs[1].period,
+      description: [
+
+      ],
+      techs: [
+        "C#",
+        "ASP.NET",
+        "Entity Framework",
+        "DDD",
+        "Git"
+      ],
+    },
+        {
       role: t.experience.jobs[0].role,
       company: "Startup VidaPet.Tech",
       period: t.experience.jobs[0].period,
