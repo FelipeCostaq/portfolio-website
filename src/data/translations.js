@@ -27,19 +27,28 @@ export const translations = {
       jobs: [
         {
           role: "Desenvolvedor Full-Stack",
-          company: "Startup VidaPet.Tech",
+          company: "VidaPet.Tech",
           period: "Setembro 2025 - Abril 2026",
           description: [
-            "Desenvolvimento e manutenção de interfaces modernas e responsivas utilizando React.js e React Native, com foco total na experiência do usuário (UX).",
-            "Construção de APIs em PHP, garantindo a comunicação eficiente com bancos de dados MySQL para consulta e gestão de informações vitais do ecossistema.",
-            "Colaboração em equipe para resolução de bugs e melhorias.",
+            "Desenvolvimento End-to-End: Desenvolvi e mantive o ecossistema digital da VidaPet.Tech focado em saúde animal (teleconsulta, prontuário e marketplace), atuando em todo o ciclo de vida do produto, desde a concepção até a sustentação em produção.",
+            "Backend & Banco de Dados: Projetei e construí APIs RESTful com PHP e MySQL, garantindo a persistência, segurança e integridade dos dados para dar suporte às plataformas web e mobile.",
+            "Desenvolvimento Mobile: Criei o aplicativo do zero utilizando React Native e Expo, traduzindo regras de negócio complexas do ambiente web em uma experiência mobile nativa e intuitiva.",
+            "Plataforma Web & UX: Mantive e evoluí a plataforma web em React.js, focando em melhorias de UI/UX, resolução de bugs críticos e estabilidade contínua do sistema.",
+            "Cultura Startup & Agilidade: Colaborei em um ambiente de startup ágil, entregando novas funcionalidades com rapidez, autonomia e foco em gerar valor desde o primeiro dia."
           ],
         },
         {
           role: "Desenvolvedor de Sistemas",
           company: "Timeware",
           period: "Abril 2026 - Presente",
-          description: [],
+          description: [
+            "Desenvolvimento Backend & APIs: Desenvolvo e mantenho APIs RESTful e sistemas backend robustos com C#, .NET Core e Entity Framework, garantindo alta disponibilidade e arquitetura escalável para a aplicação.",
+            "Segurança & Autenticação: Implemento mecanismos de autenticação e autorização com ASP.NET Core Identity, protegendo endpoints críticos e reforçando a segurança no acesso aos dados.",
+            "Infraestrutura em Nuvem: Integro e gerencio serviços em nuvem na Microsoft Azure, otimizando o deploy e a confiabilidade da infraestrutura do sistema.",
+            "Automação de Dados: Crio rotas automatizadas de web scraping e scripts de extração em Python, reduzindo o esforço manual e acelerando a coleta de dados estratégicos.",
+            "Integrações & Frontend: Atuo na modernização de projetos legados em IBM ACE e no desenvolvimento de interfaces dinâmicas em React, garantindo a integração fluida entre diferentes camadas da aplicação.",
+            "Metodologia Ágil: Colaboro diariamente em squad ágil via Kanban, priorizando demandas no Jira/Azure DevOps para garantir entregas contínuas e alinhadas às metas do produto."
+          ],
         },
       ],
     },
@@ -111,18 +120,27 @@ export const translations = {
         {
           role: "Full-Stack Developer",
           company: "Startup VidaPet.Tech",
-          period: "September 2025 - Present",
+          period: "September 2025 - April 2026",
           description: [
-            "Development and maintenance of modern, responsive interfaces using React.js and React Native, with a strong focus on user experience (UX).",
-            "API development in PHP, ensuring efficient communication with MySQL databases for querying and management of critical ecosystem data.",
-            "Collaborated with team members to troubleshoot bugs and drive improvements.",
+            "End-to-End Development: I built and maintained the VidaPet.Tech digital ecosystem, focused on animal health (teleconsultation, medical records, and marketplace), working across the entire product lifecycle, from concept to production support.",
+            "Backend & Database: I designed and built RESTful APIs with PHP and MySQL, ensuring data persistence, security, and integrity to support both the web and mobile platforms.",
+            "Mobile Development: I built the app from scratch using React Native and Expo, translating complex business rules from the web environment into an intuitive, native mobile experience.",
+            "Web Platform & UX: I maintained and evolved the React.js web platform, focusing on UI/UX improvements, fixing critical bugs, and keeping the system stable.",
+            "Startup Culture & Agility: I collaborated in a fast-paced startup environment, delivering new features quickly and autonomously, with a focus on creating value from day one."
           ],
         },
         {
           role: "System Developer",
           company: "Timeware",
           period: "April 2026 - Present",
-          description: [],
+          description: [
+            "Backend & API Development: I build and maintain RESTful APIs and robust backend systems with C#, .NET Core, and Entity Framework, ensuring high availability and a scalable architecture for the application.",
+            "Security & Authentication: I implement authentication and authorization with ASP.NET Core Identity, protecting critical endpoints and strengthening data access security.",
+            "Cloud Infrastructure: I integrate and manage Microsoft Azure cloud services, improving deployment and infrastructure reliability.",
+            "Data Automation: I create automated web scraping routes and extraction scripts in Python, cutting manual effort and speeding up the collection of strategic data.",
+            "Integrations & Frontend: I work on modernizing legacy projects in IBM ACE and building dynamic interfaces in React, ensuring smooth integration between the different layers of the application.",
+            "Agile Methodology: I collaborate daily in an agile squad using Kanban, prioritizing tasks in Jira/Azure DevOps to keep deliveries continuous and aligned with product goals."
+          ],
         },
       ],
     },
