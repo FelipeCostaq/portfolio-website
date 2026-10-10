@@ -1,12 +1,12 @@
-# 👨‍💻 Portfólio
+# Portfólio
 
 Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidades e projetos como desenvolvedor full-stack.
 
-## 🌐 Acesse o site
+## Acesse o site
 
-👉 [Portfolio](https://itsfelipe.me/)
+[Portfolio](https://itsfelipe.me/)
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Front-end
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -18,14 +18,14 @@ Bem-vindo ao meu portfólio! Este projeto reúne minhas experiências, habilidad
 ### Outros
 - ![Git](https://img.shields.io/badge/versionamento-Git-%23F05033?logo=git&logoColor=white)
 
-## 💼 O que você encontrará no portfólio
+## O que você encontrará no portfólio
 
 - **Sobre mim** — Um resumo da minha trajetória e tecnologias usadas.
 - **Experiências** - Experiência profissionais.
 - **Projetos** — Destaques de projetos desenvolvidos.
 - **Contato** — Formulário funcional para entrar em contato comigo.
 
-## 📸
+## Imagem Home
 
 <a href="https://portfolio-felipecosta.netlify.app/">
   <img height="425" width="800" src="https://github.com/FelipeCostaq/portfolio-website/blob/main/Imagem%20Portf%C3%B3lio.png?raw=true" alt="Imagem do Portfolio">
