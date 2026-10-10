@@ -10,24 +10,36 @@ export default function Experience() {
       company: "Timeware",
       period: t.experience.jobs[1].period,
       description: [
-
+        t.experience.jobs[1].description[0],
+        t.experience.jobs[1].description[1],
+        t.experience.jobs[1].description[2],
+        t.experience.jobs[1].description[3],
+        t.experience.jobs[1].description[4],
+        t.experience.jobs[1].description[5],
       ],
       techs: [
         "C#",
         "ASP.NET",
         "Entity Framework",
+        "Clean Architecture",
         "DDD",
+        "Azure",
+        "AWS",
+        "Lambda",
+        "Python",
         "Git"
       ],
     },
         {
       role: t.experience.jobs[0].role,
-      company: "Startup VidaPet.Tech",
+      company: "VidaPet.Tech",
       period: t.experience.jobs[0].period,
       description: [
         t.experience.jobs[0].description[0],
         t.experience.jobs[0].description[1],
         t.experience.jobs[0].description[2],
+        t.experience.jobs[0].description[3],
+        t.experience.jobs[0].description[4],
       ],
       techs: [
         "React",
